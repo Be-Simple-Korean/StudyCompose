@@ -1,4 +1,4 @@
-# Check
+# Check list
 * MaterialTheme
   - Material 디자인 사양의 스타일 지정 원칙을 반영한 구성 가능한 함수
   - content로 하향 적용
