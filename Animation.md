@@ -13,7 +13,7 @@
       * animationSpec
         * 애니메이션 추가 맞춤 설정   
         * tween()을 이용하여 시간 및 easing 설정
-        * easing = 애니메이션을 부드럽게 하는것
+        * easing = 애니메이션의 비율의 속도를 조정하여 애니메이션 값 속도 조정
 * animateContentSize()
   * 크기 변경에 대한 애니메이션 
 * InfiniteTransition
@@ -33,3 +33,5 @@
     ~~~  
     initialValue -> tagertValue로 반복<br>
     keyframes = 1초동안 실행 중 0.5초 내에 0~0.7f까지 진행, 나머지 0.5에서는 1f까지 진행
+* 지연 레이아웃
+ * 항목을 한꺼번에 렌더링하는 것 아니라 항목이 화면에 보이기 시작하면 스크롤 가능한 항목 세트를 렌더링하는 것
