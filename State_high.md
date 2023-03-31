@@ -49,6 +49,19 @@
     * save() = 원래 값을 저장 가능한 값으로 변환
     * restore() = 복원된 값을 원본 클래스의 인스턴스로 반환
     * Compose API 중 listSaver, mapSaver를 사용하여 코드의 양을 줄일 수 있음
-* snapshowFlow API
+* snapshowFlow API지
   * State 객체를 Flow 객체로 변환 
     * 데이터가 여러 개 일때, flow로 변환하여 filter를 거쳐 collect에서 수집후 처리
+* LifecycleEventObsever
+  * 모든 수명 주기 변경을 수신하고 수신자에게 디스패치할 수 있는 클래스
+  * 구성 가능한 함수가 아닌 뷰에 액티비티의 수명 주기를 따르게 하기 위한 클래스
+* DisposableEffect 
+  * 키가 변경되거나 컴포저블이 컴포지션을 종료하면 정리되어야 하는 부작용을 위한 것
+  * LocalLifeCycleOwner로 현재 lifecycle을 추가 
+  * DisposableEffect에 매개변수로 넘긴 key중에 변경이 발생하면 key를 사용하여 관찰자를 onDispose 람다로 삭제하고 다시 추가
+  * 이를 통해 메모리 누수 방지
+* produceState
+  * 컴포즈가 아닌 상태를 컴포즈 상태로 변환
+  * 상태에 따른 분기처리
+* derivedStateOf API
+  * paramter로 넘긴 항목이 변경되면 상태가 변경된다.
